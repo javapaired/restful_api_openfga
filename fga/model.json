@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.1",
+  "type_definitions": [
+    {
+      "type": "user"
+    },
+    {
+      "type": "user_resource",
+      "relations": {
+        "reader": {
+          "this": {}
+        },
+        "writer": {
+          "this": {}
+        }
+      },
+      "permissions": {
+        "can_view": {
+          "union": [
+            { "relation": "viewer" }
+          ]
+        },
+        "can_edit": {
+          "union": [
+            { "relation": "writer" }
+          ]
+        }
+      }
+    }
+  ]
+}

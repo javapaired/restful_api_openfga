@@ -3,7 +3,6 @@ import { sendResponse } from "../utils/sendResponse.js";
 
 // POST create new user
 export const createUser = async (req, res) => {
-
   const { name, email } = req.body;
 
   try {

@@ -3,8 +3,6 @@ import { sendResponse } from "../utils/sendResponse.js";
 
 // POST create new user
 export const createUser = async (req, res) => {
-  const { error } = schema.validate(req.body);
-  if (error) return sendResponse(res, 400, false, error.details[0].message);
 
   const { name, email } = req.body;
 
